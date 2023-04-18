@@ -1,4 +1,7 @@
 const { withContentlayer } = require('next-contentlayer')
+const withImages = require('next-images')
+const withPlugins = require('next-compose-plugins')
+const withOptimizedImages = require('next-optimized-images')
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
@@ -54,10 +57,7 @@ const securityHeaders = [
   },
 ]
 
-/**
- * @type {import('next/dist/next-server/server/config').NextConfig}
- **/
-module.exports = withContentlayer(
+const nextConfig = withContentlayer(
   withBundleAnalyzer({
     reactStrictMode: true,
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
@@ -92,3 +92,41 @@ module.exports = withContentlayer(
     },
   })
 )
+
+/**
+ * @type {import('next/dist/next-server/server/config').NextConfig}
+ **/
+module.exports = withPlugins([
+  [
+    withOptimizedImages,
+    {
+      // 设置处理的图片类型
+      optimizeImagesInDev: false,
+      optimizeImages: true,
+      mozjpeg: {
+        quality: 80,
+      },
+      pngquant: {
+        speed: 3,
+        strip: true,
+        verbose: true,
+      },
+      svgo: {
+        plugins: [
+          {
+            removeComments: true,
+            removeTitle: true,
+            removeDesc: true,
+            removeViewBox: false,
+            removeUselessDefs: true,
+            cleanupIDs: true,
+            collapseGroups: true,
+            convertShapeToPath: true,
+          },
+        ],
+      },
+    },
+  ],
+  withImages(),
+  nextConfig,
+])
