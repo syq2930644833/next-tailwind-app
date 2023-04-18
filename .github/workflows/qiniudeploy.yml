@@ -36,16 +36,16 @@ jobs:
       - run: yarn build
       - run: npx next export
       - name: deploy
-        uses: Vermouth/action-qiniu-upload@master
+        uses: maqi1520/action-qiniu-upload@master
         with:
           # Your qiniu access key, required.
-          access_key: 'YDW1Fa0O4YAeg1JTuI7xACjQzibf4tqt0vjEWyxr'
+          access_key: ${{ secrets.QINIU_ACCESS_KEY }}
 
           # Your qiniu secret key, required.
-          secret_key: 'g199hfOsTuiP_hFPN53cte6GcmAAsWw4ZOZerkNc'
+          secret_key: ${{ secrets.QINIU_SECRET_KEY }}
 
           # Bucket name, required.
-          bucket: 'next-tailwind-blog'
+          bucket: ${{ secrets.QINIU_BUCKET }}
 
           # The local directory (or file) you want to upload to bucket.
           # Default: './'
