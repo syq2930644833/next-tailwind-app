@@ -1,6 +1,4 @@
 const { withContentlayer } = require('next-contentlayer')
-const withPlugins = require('next-compose-plugins')
-const optimizedImages = require('next-optimized-images')
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
@@ -56,7 +54,10 @@ const securityHeaders = [
   },
 ]
 
-const nextConfig = withContentlayer(
+/**
+ * @type {import('next/dist/next-server/server/config').NextConfig}
+ **/
+module.exports = withContentlayer(
   withBundleAnalyzer({
     reactStrictMode: true,
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
@@ -90,19 +91,4 @@ const nextConfig = withContentlayer(
       return config
     },
   })
-)
-
-/**
- * @type {import('next/dist/next-server/server/config').NextConfig}
- **/
-module.exports = withPlugins(
-  [
-    [
-      optimizedImages,
-      {
-        // 在此处配置图像加载器选项
-      },
-    ],
-  ],
-  nextConfig
 )
