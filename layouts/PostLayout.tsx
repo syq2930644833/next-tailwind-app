@@ -7,17 +7,17 @@ import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import TOCInline from '@/components/TOCInline'
 import siteMetadata from '@/data/siteMetadata'
-import Comments from '@/components/comments'
+// import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import { CoreContent } from '@/lib/utils/contentlayer'
 import { ReactNode } from 'react'
 import type { Blog, Authors } from 'contentlayer/generated'
 
-const editUrl = (slug) => `${siteMetadata.siteRepo}/blob/master/data/blog/${slug}`
-const discussUrl = (slug) =>
-  `https://mobile.twitter.com/search?q=${encodeURIComponent(
-    `${siteMetadata.siteUrl}/blog/${slug}`
-  )}`
+// const editUrl = (slug) => `${siteMetadata.siteRepo}/blob/master/data/blog/${slug}`
+// const discussUrl = (slug) =>
+//   `https://mobile.twitter.com/search?q=${encodeURIComponent(
+//     `${siteMetadata.siteUrl}/blog/${slug}`
+//   )}`
 
 const postDateTemplate: Intl.DateTimeFormatOptions = {
   weekday: 'long',
@@ -36,7 +36,7 @@ interface Props {
 
 export default function PostLayout({ content, authorDetails, next, prev, children }: Props) {
   const { slug, date, title, tags, images, toc } = content
-  const src = images[0]
+  const src = images && images[0]
 
   return (
     <SectionContainer>
