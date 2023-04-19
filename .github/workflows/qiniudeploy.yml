@@ -34,7 +34,7 @@ jobs:
             ${{ runner.os }}-yarn-
       - run: yarn install
       - run: yarn build
-      - run: npx next export
+      - run: npx next start
       - name: deploy
         uses: maqi1520/action-qiniu-upload@master
         with:

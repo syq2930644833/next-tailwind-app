@@ -101,7 +101,7 @@ module.exports = withPlugins([
     withOptimizedImages,
     {
       // 设置处理的图片类型
-      optimizeImagesInDev: true,
+      optimizeImagesInDev: false,
       optimizeImages: false,
       mozjpeg: {
         quality: 80,
