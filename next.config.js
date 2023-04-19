@@ -72,6 +72,10 @@ const nextConfig = withContentlayer(
         },
       ]
     },
+    images: {
+      loader: 'custom',
+      loaderFile: './image-loader.js',
+    },
     webpack: (config, { dev, isServer }) => {
       config.module.rules.push({
         test: /\.svg$/,
@@ -102,7 +106,7 @@ module.exports = withPlugins([
     {
       // 设置处理的图片类型
       optimizeImagesInDev: true,
-      optimizeImages: false,
+      optimizeImages: true,
       mozjpeg: {
         quality: 80,
       },
