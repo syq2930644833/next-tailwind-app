@@ -111,11 +111,13 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               <TOCInline asDisclosure={false} toc={toc} />
             </div>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
-              {src ? (
-                <div className="mt-6">
-                  <img alt={title} className="w-full rounded object-cover shadow-lg" src={src} />
-                </div>
-              ) : null}
+              <div className="mt-6">
+                <img
+                  alt={title}
+                  className="w-full rounded object-cover shadow-lg"
+                  src={src || 'https://placeimg.com/800/420/nature'}
+                />
+              </div>
               <div className="prose max-w-none pb-8 pt-10 dark:prose-dark">{children}</div>
               {/* <div className="pb-6 pt-6 text-sm text-gray-700 dark:text-gray-300">
                 <Link href={discussUrl(slug)} rel="nofollow">
