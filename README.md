@@ -2,7 +2,7 @@
 
 ## 项目地址
 
-[Vermouth | 一个瓦笔前端](http://www.shaoyiqiao.online)
+[Vermouth | 一个瓦笔前端](http://www.shaoyiqiao.online){:target="_blank"}
 
 ## 关于部署
 
