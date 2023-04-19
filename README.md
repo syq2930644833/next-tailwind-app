@@ -4,6 +4,8 @@
 
 [Vermouth | 一个瓦笔前端](http://www.shaoyiqiao.online){:target="_blank"}
 
+-.- github 不支持解析新标签页打开
+
 ## 关于部署
 
 - 国外用 vercel
