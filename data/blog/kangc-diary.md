@@ -5,7 +5,7 @@
     draft: false
     summary: 记录康C大将军主要成就的日记
     type: Blog
-    images: ['http://cdn.shaoyiqiao.online/kangC-diary.jpg']
+    images: ['http://cnd.shaoyiqiao.online/kangC-diary.jpg']
     authors: ['default']
     layout: PostLayout
 ---
