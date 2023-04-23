@@ -27,7 +27,7 @@ export default function Tags({ tags }: InferGetStaticPropsType<typeof getStaticP
           </h1>
         </div>
         <div className="flex max-w-lg flex-wrap">
-          {Object.keys(tags).length === 0 && 'No tags found.'}
+          {Object.keys(tags).length === 0 && '空空如也.'}
           {sortedTags.map((t) => {
             return (
               <div key={t} className="mb-2 mr-5 mt-2">

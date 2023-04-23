@@ -54,13 +54,14 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
             </svg>
           </div>
         </div>
-        <ul>
-          {!filteredBlogPosts.length && 'No posts found.'}
-          {displayPosts.map((frontMatter) => {
-            const { slug } = frontMatter
-            return <Article {...frontMatter} key={slug} />
-          })}
-        </ul>
+        {filteredBlogPosts.length > 0 && (
+          <ul>
+            {displayPosts.map((frontMatter) => {
+              const { slug } = frontMatter
+              return <Article {...frontMatter} key={slug} />
+            })}
+          </ul>
+        )}
       </div>
       {pagination && pagination.totalPages > 1 && !searchValue && (
         <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />

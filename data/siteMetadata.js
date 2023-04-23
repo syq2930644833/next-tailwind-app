@@ -1,7 +1,7 @@
 const siteMetadata = {
-  title: 'Vermouth | 一个瓦笔前端',
-  author: 'Vermouth',
-  headerTitle: '艾苦酒.',
+  title: '一个学不会的瓦笔前端',
+  author: '壹朵小花吖',
+  headerTitle: '壹朵小花吖.',
   description: '记录 分享 成长',
   language: 'en-us',
   theme: 'system', // system, dark or light
