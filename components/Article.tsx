@@ -14,7 +14,7 @@ export default function Article({ slug, date, title, summary, tags, images }: Po
           <dt className="mb-4">
             <Link
               href={`/blog/${slug}`}
-              className="block h-32 w-56 transform overflow-hidden rounded shadow-lg"
+              className="block w-full transform overflow-hidden rounded shadow-lg"
               title={title}
             >
               <img
@@ -55,7 +55,7 @@ export default function Article({ slug, date, title, summary, tags, images }: Po
               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
               aria-label={`Read "${title}"`}
             >
-              更多 &rarr;
+              阅读更多 &rarr;
             </Link>
           </div>
         </div>
