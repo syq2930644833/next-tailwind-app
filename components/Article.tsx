@@ -14,12 +14,12 @@ export default function Article({ slug, date, title, summary, tags, images }: Po
           <dt className="mb-4">
             <Link
               href={`/blog/${slug}`}
-              className="block w-full transform overflow-hidden rounded shadow-lg"
+              className="block h-32 w-full transform overflow-hidden rounded shadow-lg"
               title={title}
             >
               <img
                 alt={title}
-                className="transform object-cover duration-200 hover:scale-125"
+                className="w-full transform duration-200 hover:scale-125"
                 src={
                   src ||
                   'https://source.unsplash.com/random/224x128/?film,2K' ||

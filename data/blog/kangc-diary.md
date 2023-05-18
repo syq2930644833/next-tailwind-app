@@ -5,7 +5,7 @@
     draft: false
     summary: 记录康C大将军主要成就的日记
     type: Blog
-    images: ['https://cnd.shaoyiqiao.online/kangC-diary.jpg']
+    images: ['https://cdn.shaoyiqiao.online/kangC-diary.jpg']
     authors: ['default']
     layout: PostLayout
 ---
@@ -28,6 +28,6 @@
 - 电源 长城 G7 金牌 750W
 - 内存 英睿达 8G ddr5 4800 \* 2
 - SSD `从笔记本上拆了一个`
-- 散热 乔伯斯 CR-1400
-- 风扇 1 _ 20cm, 12cm _ 3
+- 散热 乔思伯 CR-1400
+- 风扇 20cm _ 1, 12cm _ 3
 - 机箱 长城阿基米德 KM-1
