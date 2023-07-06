@@ -8,7 +8,7 @@
     images: ['https://cdn.shaoyiqiao.online/kangC-diary.jpg']
     authors: ['default']
     layout: PostLayout
-    show: true
+    show: false
 ---
 
 ## 前言
