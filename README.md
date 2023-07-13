@@ -2,7 +2,7 @@
 
 ## 项目地址
 
-[Vermouth | 一个瓦笔前端](http://www.shaoyiqiao.online){:target="_blank"}
+[Vermouth | 一个瓦笔前端](http://www.shaoyiqiao.online){:target="\_blank"}
 
 -.- github 不支持解析新标签页打开
 
@@ -32,8 +32,3 @@
          layout: PostLayout
      ---
   ```
-
-## TODO
-
-- 计划加一个日常学习页
-- 计划加一个生活记录页

@@ -23,12 +23,12 @@ export default function Article({
             <dt className="mb-4">
               <Link
                 href={`/blog/${slug}`}
-                className="flex h-32 w-full transform justify-center overflow-hidden rounded bg-gray-400 shadow-lg"
+                className="block overflow-hidden rounded shadow-lg"
                 title={title}
               >
                 <img
                   alt={title}
-                  className="w-full transform duration-200 hover:scale-125"
+                  className="w-full transform object-cover duration-200 hover:scale-110"
                   src={
                     src ||
                     'https://source.unsplash.com/random/224x128/?film,2K' ||
